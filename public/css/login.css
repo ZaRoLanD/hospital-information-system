@@ -1,0 +1,63 @@
+/* Login page — layered on top of the design system (style.css handles .view.intro-2) */
+
+/* The login page has no explicit <body class>; give it the app typography */
+body {
+  font-family: var(--font-sans);
+  background: #312e81;
+}
+
+html,
+body,
+header,
+.view {
+  height: 100vh;
+}
+
+@media (max-width: 740px) {
+  html, body, header, .view { height: 815px; }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html, body, header, .view { height: 650px; }
+}
+
+/* Card entrance */
+.intro-2 .card {
+  margin-top: 30px;
+  animation: loginCardIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes loginCardIn {
+  from { opacity: 0; transform: translateY(18px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Icon inside the card header */
+.intro-2 .form-header i.fa-user {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 0.6rem;
+  border-radius: 16px;
+  background: var(--primary-soft);
+  color: var(--primary) !important;
+  font-size: 1.3rem;
+}
+
+/* Inputs: rounded, comfortable, full-width */
+.intro-2 .md-form .form-control {
+  padding-left: 2.8rem;
+  border-radius: 12px;
+}
+.intro-2 .md-form .prefix {
+  width: 2.6rem;
+  left: 0.2rem;
+}
+
+/* Sign-in button: full width */
+.intro-2 button.btn {
+  width: 100%;
+  margin-top: 0.4rem;
+}
+
+.intro-2 hr { border-color: var(--border); }

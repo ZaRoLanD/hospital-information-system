@@ -1,0 +1,37 @@
+# --- Données d'exécution ---
+# Panier des réquisitions (état utilisateur, jamais versionné)
+includes/req/cart.txt
+
+# --- Logs & temporaires ---
+*.log
+*.tmp
+nohup.out
+/tmp/
+
+# --- Profils & captures temporaires (Chrome headless) ---
+chrome-his-*/
+shot-*.png
+his-cap.png
+his-*.png
+
+# --- Fichiers dev locaux (jamais commités) ---
+dev_shot.php
+dev_autologin.php
+
+# --- Environnement & secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Dépendances ---
+node_modules/
+vendor/
+
+# --- OS & éditeur ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Métadonnées d'outils ---
+.freebuff/
